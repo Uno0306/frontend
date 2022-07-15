@@ -6,14 +6,8 @@ function App() {
 
   useEffect(() => {
     fetch("/api/deploy")
-      .then((response) => {
-        response.text();
-      })
-      .then((promise) => {
-        {
-          setMsg(promise);
-        }
-      })
+      .then((response) => response.text())
+      .then((promise) => setMsg(promise))
       .catch((error) => console.log(error));
   }, []);
 
