@@ -7,12 +7,10 @@ function App() {
   useEffect(() => {
     fetch("/api/deploy")
       .then((response) => {
-        console.log(response);
         response.text();
       })
       .then((promise) => {
         {
-          console.log(promise);
           setMsg(promise);
         }
       })
